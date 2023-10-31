@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Connect to your MongoDB database
-mongoose.connect('mongodb://localhost:27017/yourdb', {
+mongoose.connect('mongodb+srv://vaaleksandar:<password>@cluster0.xaadjen.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
