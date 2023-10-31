@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Faculty</title>
+</head>
+<body>
+  <h1>Create a Faculty</h1>
+  <form action="/faculties" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="university">University:</label>
+    <select name="university" required>
+      <% universities.forEach(function(university) { %>
+        <option value="<%= university._id %>"><%= university.name %></option>
+      <% }); %>
+    </select>
+    <br>
+    <input type="submit" value="Create Faculty">
+  </form>
+</body>
+</html>
